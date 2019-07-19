@@ -55,7 +55,7 @@ plt.title("Espacio_amplitudes_filtro_seria")
 plt.subplot(2,2,4)
 plt.imshow(abs(Filtro_sonrie_shift),norm= LogNorm())
 plt.title("Amplitudes_filtro_sonrie")
-plt.savefig("ImProceso")
+plt.savefig("ImProceso.pdf")
 
 
 Total = 0.75*Sonrie_freq + 2.5*Seria_freq
@@ -65,4 +65,4 @@ Imag_hib = np.fft.ifft2(Total)
 plt.figure()
 plt.imshow(-Imag_hib.real,cmap='Greys')
 plt.title("Imagen Hibrida")
-plt.savefig("Hibrida")
+plt.savefig("Hibrida.pdf")

@@ -37,12 +37,28 @@ En primer lugar, lo que se debe hacer es leer las fotografías como un arreglo q
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{(FFtIm.pdf}
+    \includegraphics[width=\textwidth]{FFtIm.pdf}
     \caption{En la imagen se muestra el espectro de Fourier para cada una de las imagenes.}
-    \label{fig:pos}
+    \label{fig:FFT}
 \end{figure}
 
+A continuación lo que se debe hacer, teniendo ya la figura\ref{fig:FFT}, es realizar el filtro. Este filtro es importante ya que en este radica gran parte de la clave de que la imagen híbrida salga bien. Entonces, lo ideal sería aplicar un filtro gaussiano a una imagen y a la otra un filtro pasa altos. En el desarrollo de este problema se decidió usar un filtro pasa bajos en vez de un desenfoque gaussiano, ya que para efectos prácticos funciona bastante bien. A continuación se muestra el proceso de filtros y cambio a un espacio de amplitudes. 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ImProceso.pdf}
+    \caption{En la imagen se muestra en la parte de arriba lo que sucede despues de aplicar el filtro, mientras que en las imagenes de abajo se muestra lo que sucede cuando volvemos al espacio de amplitudes(estabamos en el espacio de frecuancias).}
+    \label{fig:pro}
+\end{figure}
+
+Finalmente, luego de esto debemos sumar ambas imagenes (acá puede ser de utilidad multiplicar ambas imagenes por un numero entre 0 y 1) y aplicar la transformada inversa de la superposición de las imagenes. Lo cual nos permite observar el siguiente resultado:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Hibrida.pdf}
+    \caption{Se muestra la imagen híbrida obtenida del proceso anteriormente descrito.}
+    \label{fig:hib}
+\end{figure}
 
 \section{Ecuaciones diferenciales ordinarias}
 En este caso se evaluará el sistema tierra-sol, el cual se puede modelar mediante la siguiente ecuación diferencial: 
