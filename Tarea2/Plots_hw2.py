@@ -146,7 +146,7 @@ plt.plot(RK_3[:,6],RK_3[:,4])
 plt.title("RK_0.0005")
 plt.subplots_adjust(hspace=.5)
 plt.xlabel("t[yr]")
-plt.savefig("Mome_met_dt")
+plt.savefig("Mome_met_dt.pdf")
 
 plt.figure(figsize=(10,5))                     ####################### Grafica Energia mecanica contra t ########################
 plt.subplot(3,3,1)
